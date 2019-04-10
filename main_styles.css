@@ -11,6 +11,7 @@ Document CSS
 	3.1. Bar d'en tête
 	3.2. Logo
 	3.3. Navigation
+	3.4. Acceuil
 4. Acceuil
 5. Recherche
 6. Pied de page
@@ -360,8 +361,6 @@ section
 {
 	opacity: 1;
 }
-
-
 /*********************************
 3.4 Acceuil
 *********************************/
@@ -622,6 +621,120 @@ section
 {
 	opacity: 0.8;
 }
+/*********************************
+5.1. Pack
+*********************************/
+.pack
+{
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 105px;
+}
+.pack_title
+{
+	font-weight: 700;
+	color: #2d2c2c;
+	margin-top: -14px;
+}
+.pack_text
+{
+	margin-top: 21px;
+}
+.pack_text p
+{
+	font-size: 24px;
+	font-style: italic;
+	color: #929191;
+	line-height: 1.336;
+	margin-bottom: 0px;
+}
+.pack_items
+{
+	margin-top: 69px;
+}
+.pack_item
+{
+	width: 100%;
+	height: 425px;
+}
+.pack_item_overlay
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: rgba(49, 18, 75, 0.55);
+}
+.pack_item_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+.pack_item_content
+{
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+.pack_date
+{
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: auto;
+	padding-left: 39px;
+	padding-right: 39px;
+	white-space: nowrap;
+	font-size: 13px;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 27px;
+	background: #fa9e1c;
+	border-radius: 14px;
+}
+.pack_button
+{
+	position: absolute;
+	bottom: 51px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.pack_center
+{
+
+}
+.pack_center h1
+{
+	font-size: 59px;
+	font-weight: 700;
+	color: #FFFFFF;
+	letter-spacing: -0.05em;
+}
+.pack_price
+{
+	font-size: 14px;
+	font-weight: 400;
+	color: #FFFFFF;
+	margin-top: -4px;
+}
 
 /********************
 6. Pied de Page
@@ -785,120 +898,6 @@ section
     margin: 0;
     padding: 14px;
 }
-/*********************************
-7. Intro
-*********************************/
 
-.intro
-{
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 105px;
-}
-.intro_title
-{
-	font-weight: 700;
-	color: #2d2c2c;
-	margin-top: -14px;
-}
-.intro_text
-{
-	margin-top: 21px;
-}
-.intro_text p
-{
-	font-size: 24px;
-	font-style: italic;
-	color: #929191;
-	line-height: 1.336;
-	margin-bottom: 0px;
-}
-.intro_items
-{
-	margin-top: 69px;
-}
-.intro_item
-{
-	width: 100%;
-	height: 425px;
-}
-.intro_item_overlay
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	background: rgba(49, 18, 75, 0.55);
-}
-.intro_item_background
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	z-index: 1;
-}
-.intro_item_content
-{
-	width: 100%;
-	height: 100%;
-	z-index: 3;
-}
-.intro_date
-{
-	position: absolute;
-	top: 35px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
-	width: auto;
-	padding-left: 39px;
-	padding-right: 39px;
-	white-space: nowrap;
-	font-size: 13px;
-	font-weight: 400;
-	color: #FFFFFF;
-	line-height: 27px;
-	background: #fa9e1c;
-	border-radius: 14px;
-}
-.intro_button
-{
-	position: absolute;
-	bottom: 51px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
-.intro_center
-{
-
-}
-.intro_center h1
-{
-	font-size: 59px;
-	font-weight: 700;
-	color: #FFFFFF;
-	letter-spacing: -0.05em;
-}
-.intro_price
-{
-	font-size: 14px;
-	font-weight: 400;
-	color: #FFFFFF;
-	margin-top: -4px;
-}
 
 }
