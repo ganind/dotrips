@@ -13,7 +13,7 @@ Document CSS
 	3.3. Navigation
 	3.4. Acceuil
 4. Acceuil
-6. Pied de page
+5. Pied de page
 
 ******************/
 
@@ -185,7 +185,7 @@ section
 	display: inline-block;
 	margin-right: 36px;
 	line-height: 36px;
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: 600;
 	color: #FFFFFF;
 }
@@ -232,7 +232,7 @@ section
 .user_box_link a
 {
 	display: block;
-	font-size: 10px;
+	font-size: 13px;
 	line-height: 36px;
 	font-weight: 600;
 	color: #FFFFFF;
@@ -270,11 +270,10 @@ section
 }
 .logo a
 {
-	font-family: 'Karla', sans-serif;
+	font-family: 'Beyond', sans-serif;
 	font-size: 40px;
 	color: #FFFFFF;
-	font-weight: 700;
-	text-transform: uppercase;
+	font-weight: 200;
 }
 .logo a img
 {
@@ -301,6 +300,7 @@ section
 }
 .main_nav_item
 {
+	border: 2px solid #31124b;
 	position: relative;
 	display: inline-block;
 	margin-right: 40px;
@@ -319,6 +319,10 @@ section
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
+.main_nav_item a:hover
+{
+	color: #fa9e1c;
+}
 
 /*********************************
 3.4 Acceuil
@@ -330,11 +334,8 @@ section
 }
 .home_container
 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50%;
+	position: relative;
+	text-align: center;
 	background: #31124b;
 }
 .home_background_text h1
@@ -342,14 +343,14 @@ section
 	vertical-align: middle;
 	position: center;
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 50px;
 	color: #FFFFFF;
 }
 .home_background_text h1:first-child
 {
 	font-family: 'Karla';
 	position: center;
-	font-size: 90px;
+	font-size: 80px;
 	font-weight: 700;
 	color: #FFFFFF;
 	text-transform: uppercase;
@@ -357,9 +358,18 @@ section
 .home_background_text h1:nth-child(2)
 {
 	font-family: 'Beyond';
-	font-size: 80px;
+	font-size: 70px;
 	color: #FFFFFF;
 	margin-top: -34px;
+}
+.home_background_img
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-color: #31124b;
 }
 /*********************************
 5.1. Pack
@@ -368,14 +378,14 @@ section
 {
 	width: 100%;
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 	text-align: center;
-	background-color: #31124b;
+	display: inline-block;
 }
 .pack_box
 {
 	position: absolute;
-	top: -143px; 
+	bottom: 400px; 
 	left: 100px;
 	border: 2px solid purple;
 	padding-bottom: 20px;
@@ -384,7 +394,7 @@ section
 .pack_box_2
 {
 	position: absolute;
-	top: -143px; 
+	bottom: 400px; 
 	left: 400px;
 	border: 2px solid purple;
 	padding-bottom: 20px;
@@ -393,7 +403,7 @@ section
 .pack_box_3
 {
 	position: absolute;
-	top: -143px; 
+	bottom: 400px; 
 	left: 700px;
 	border: 2px solid purple;
 	padding-bottom: 20px;
@@ -457,7 +467,7 @@ section
 .footer
 {
 	width: 100%;
-
+	height: 350px;
 	padding-bottom: 50px;
 	background: linear-gradient(to right, #fa9e1b, #8d4fff);
 }
@@ -479,6 +489,7 @@ section
 .contact_info_list
 {
 	margin-top: 40px;
+		text-align: right;
 }
 .contact_info_item
 {
