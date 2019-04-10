@@ -52,19 +52,25 @@
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
+					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
 						<div class="logo"><a href="#"><img src="images/logo.png" alt="">DO trips</a></div>	
+					</div>
 					<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="#">Packs</a></li>
-								<li class="main_nav_item"><a href="about.html">Catégories</a></li>
+								<li class="main_nav_item"><a href="#">Accueil</a></li>
+								<li class="main_nav_item"><a href="about.html">A Propos</a></li>
 								<li class="main_nav_item"><a href="contact.html">Contact</a></li>
 							</ul>
+
+
 					</div>
 				</div>
 			</div>
 		</nav>
 
 	</header>
+
+
 
 <!-- Accueil -->
 
@@ -74,59 +80,109 @@
 
 	<!-- Background d'Accueil -->
 
+			<!-- Image pour https://unsplash.com/@anikindimitry -->
+		<div class="home_background" style="background-image :url(home_slider.jpg)"></div>
+
 		<div class="home_background_text">
 			<h1>découvrez</h1>
 			<h1>le monde</h1>
 		</div>
 	</div>
-	</div>	
+</div>
+		<!-- Recherches de voyages -->
+
+	<div class="search">
 
 
-<div class="pack">
-	<div class="pack_box">
-		<div id="pack_box_items">
-			<div class="pack_box_background" style="background-image: url(images/london1.jpg);"></div>
-			<div class="pack_date">10 Décembre au 20 Décembre</div>
-			<div class="pack_name">
-				<h1>Londres</h1>
-				<div class="pack_price">2000€</div>
-			</div>
-				<div class="button pack_button"><div class="button_bcg"></div><a href="#">Ajouter au Panier<span></span><span></span><span></span></a>
+					<!-- Bars Recherches -->
+
+					<div class="search_tabs_container">
+						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span><a href="pack.html">Packs</span></div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">Par Catégories</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/promo.png" alt="">Promotions</div>
+						</div>		
+					</div>
+
+					<!-- Bar Recherche PACKS -->
+<!-- PACK 1 -->
+
+
+	<!-- Intro Item
+	<div class="pack">
+		<div class="container">
+			<div class="row pack_items">
+
+				
+
+				<div class="col-lg-4 intro_col">
+					<div class="pack_item">
+						<div class="pack_item_overlay"></div>
+						<!-- Image by https://unsplash.com/@dnevozhai
+						<div class="pack_item_background" style="background-image:url(images/london1.jpg)"></div>
+						<div class="pack_item_content d-flex flex-column align-items-center justify-content-center">
+							<div class="pack_date">May 25th - June 01st</div>
+
+							<div class="pack_center text-center">
+								<h1>Londres</h1>
+								<div class="pack_price">From $1450</div>
+							</div>
+								<div class="button pack_button"><div class="button_bcg"></div><a href="#">Ajouter au Panier<span></span><span></span><span></span></a></div>
+						</div>
+					</div>
 				</div>
+
+				<!-- Intro Item 
+
+
+
+				<div class="col-lg-4 intro_col">
+					<div class="intro_item">
+						<div class="intro_item_overlay"></div>
+						<!-- Image by https://unsplash.com/@hellolightbulb 
+						<div class="intro_item_background" style="background-image:url(images/intro_2.jpg)"></div>
+						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+							<div class="intro_date">May 25th - June 01st</div>
+							<div class="intro_center text-center">
+								<h1>Greece</h1>
+								<div class="intro_price">From $1450</div>
+							</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">Ajouter au Panier<span></span><span></span><span></span></a></div>
+						</div>
+					</div>
+				</div>
+					<!-- Bars Recherches 2 
+				<div class="col-lg-4 intro_col">
+					<div class="intro_item">
+						<div class="intro_item_overlay"></div>
+						<!-- Image by https://unsplash.com/@willianjusten 
+						<div class="intro_item_background" style="background-image:url(images/intro_3.jpg)"></div>
+						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+							<div class="intro_date">May 25th - June 01st</div>
+
+							<div class="intro_center text-center">
+								<h1>Scotland</h1>
+								<div class="intro_price">From $1450</div>
+							</div>
+								<div class="button intro_button"><div class="button_bcg"></div><a href="#">Ajouter au Panier<span></span><span></span><span></span></a></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
+					 Bars Recherches 3 -->
 
-	
-		<div class="pack_box_2">
-		<div id="pack_box_items">
-			<div class="pack_box_background" style="background-image: url(images/london1.jpg);"></div>
-			<div class="pack_date">10 Décembre au 20 Décembre</div>
-			<div class="pack_name">
-				<h1>Cardiff</h1>
-				<div class="pack_price">2000€</div>
-			</div>
-				<div class="button pack_button"><div class="button_bcg"></div><a href="#">Ajouter au Panier<span></span><span></span><span></span></a>
+					</div>
 				</div>
+			</div>		
 		</div>
 	</div>
-
-		<div class="pack_box_3">
-		<div id="pack_box_items">
-			<div class="pack_box_background" style="background-image: url(images/london1.jpg);"></div>
-			<div class="pack_date">10 Décembre au 20 Décembre</div>
-			<div class="pack_name">
-				<h1>Bordeaux</h1>
-				<div class="pack_price">2000€</div>
-			</div>
-				<div class="button pack_button"><div class="button_bcg"></div><a href="#">Ajouter au Panier<span></span><span></span><span></span></a>
-				</div>
-		</div>
-			</div>
-
-		</div>
+</div>
 
 
-					
+
 
 <!-- Pied de page | Footer -->
 
@@ -152,7 +208,7 @@
 				</div>
 
 				<!-- Footer Column -->
-				<div class="footer_column">
+				<div class="col-lg-3 footer_column">
 					<div class="footer_col">
 						<div class="footer_title">contact info</div>
 						<div class="footer_content footer_contact">
