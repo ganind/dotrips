@@ -223,10 +223,7 @@ section
 {
 	margin-right: 15px;
 }
-.user_box_panier
-{
-	margin-left: 15px;
-}
+
 .user_box_login::after
 {
 	display: block;
@@ -238,17 +235,7 @@ section
 	height: 9px;
 	content: '';
 }
-.user_box_register::after
-{
-	display: block;
-	position: absolute;
-	top: 15px;
-	right: -9px;
-	background: #FFFFFF;
-	width: 1px;
-	height: 9px;
-	content: '';
-}
+
 /*********************************
 3.2 Logo
 *********************************/
@@ -590,4 +577,19 @@ section
     margin: 0;
     padding: 14px;
 }
+/******************
+7. Produits
+******************/
+.titre
+{
+	width: 80%;
+	height: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#666;
+	border: 0 none;
+	margin-top: 100px;
+	margin-bottom:100px;
+}
+
 }
