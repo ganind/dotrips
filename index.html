@@ -39,8 +39,8 @@
 					<!-- Accès espace client -->
 
 					<div class="user_box ml-auto"> 
-					<div class="user_box_login user_box_link"><a href="#">S'Identifier</a></div>
-					<div class="user_box_register user_box_link"><a href="#">Créer un compte</a></div>
+					<div class="user_box_login user_box_link"><a href="login.php">S'Identifier</a></div>
+					<div class="user_box_register user_box_link"><a href="Nouveau_Membre.php">Créer un compte</a></div>
 					<div class="user_box_panier user_box_link"><a href="#">Panier</a></div>
 					</div>
 				</div>
@@ -58,6 +58,23 @@
 								<li class="main_nav_item"><a href="about.html">Packs</a></li>
 								<li class="main_nav_item"><a href="about.html">Catégories</a></li>
 								<li class="main_nav_item"><a href="contact.html">Contact</a></li>
+								<li class="main_nav_item"><a href="products.php">Boutique</a></li>
+								<?php
+									session_start();
+									/* ici débute la session*/ 
+									if (isset($_SESSION["access_level"]))
+									{
+										if ($_SESSION["access_level"] == '1') /* on établit un niveau d'accès pour créer le back office, ici l'administrateur possède le niveau d'accès 1 */
+										{
+											echo '<li class="main_nav_item"><a href="admin.php">Admin</a></li>';
+											echo '<li class="main_nav_item"><a href="logout.php">Déconnexion</a></li>';
+										}
+										else
+										{
+											/* N'affiche pas l'onglet ADMIN si l'utilisateur ne possède pas le niveau d'accès 1 */
+										} 
+									}
+								?>
 							</ul>
 					</div>
 				</div>
