@@ -51,29 +51,13 @@
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
-						<div class="logo"><a href="#"><img src="images/logo.png" alt="">DO trips</a></div>	
+						<div class="logo"><a href="index.html"><img src="images/logo.png" alt="">DO trips</a></div>	
 					<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="about.html">Packs</a></li>
-								<li class="main_nav_item"><a href="about.html">Catégories</a></li>
+								<li class="main_nav_item"><a href="index.html">Packs</a></li>
+								<li class="main_nav_item"><a href="categories.html">Catégories</a></li>
 								<li class="main_nav_item"><a href="contact.html">Contact</a></li>
-								<li class="main_nav_item"><a href="products.php">Boutique</a></li>
-								<?php
-									session_start();
-									/* ici débute la session*/ 
-									if (isset($_SESSION["access_level"]))
-									{
-										if ($_SESSION["access_level"] == '1') /* on établit un niveau d'accès pour créer le back office, ici l'administrateur possède le niveau d'accès 1 */
-										{
-											echo '<li class="main_nav_item"><a href="admin.php">Admin</a></li>';
-											echo '<li class="main_nav_item"><a href="logout.php">Déconnexion</a></li>';
-										}
-										else
-										{
-											/* N'affiche pas l'onglet ADMIN si l'utilisateur ne possède pas le niveau d'accès 1 */
-										} 
-									}
-								?>
+								<li class="main_nav_item"><a href="products.html">Boutique</a></li>
 							</ul>
 					</div>
 				</div>
@@ -96,13 +80,12 @@
 		</div>
 	<div class="promo_box">
 		<div class="promo_text"> 
-		nos promotions du moment...</div>
+		Nos promotions du moment...</div>
 	</div>
 	</div>
 	</div>	
 
-
-
+	<!-- Packs 1 -->
 
 <div class="pack">
 	<div class="pack_box">
@@ -113,12 +96,13 @@
 				<h1>Londres</h1>
 				<div class="pack_price">-10%</div>
 			</div>
-				<div class="pack_button_text">Ajouter au Panier<a href="#"><span></span><span></span><span></span></a>
+				<div class="pack_button_text">Ajouter au Panier<a href="products.html"><span></span><span></span><span></span></a>
 				</div>
 		</div>
 	</div>
 
-	
+	<!-- Packs 2 -->
+
 		<div class="pack_box_2">
 		<div id="pack_box_items">
 			<div class="pack_box_background" style="background-image: url(images/cardiff.jpg);"></div>
@@ -127,10 +111,12 @@
 				<h1>Cardiff</h1>
 				<div class="pack_price">-20%</div>
 			</div>
-				<div class="pack_button_text">Ajouter au Panier<a href="#"><span></span><span></span><span></span></a>
+				<div class="pack_button_text">Ajouter au Panier<a href="products.html"><span></span><span></span><span></span></a>
 				</div>
 		</div>
 	</div>
+
+	<!-- Packs 3 -->
 
 		<div class="pack_box_3">
 		<div id="pack_box_items">
@@ -140,7 +126,7 @@
 				<h1>Bordeaux</h1>
 				<div class="pack_price">-50%</div>
 			</div>
-				<div class="pack_button_text">Ajouter au Panier<a href="#"><span></span><span></span><span></span></a>
+				<div class="pack_button_text">Ajouter au Panier<a href="products.html"><span></span><span></span><span></span></a>
 				</div>
 		</div>
 			</div>
@@ -159,7 +145,7 @@
 				<div class="footer_col">
 					<div class="footer_content footer_about">
 						<div class="logo_container footer_logo">
-							<div class="logo"><a href="#"><img src="images/logo.png" alt="">Do Trips</a></div>
+							<div class="logo"><a href="index.html"><img src="images/logo.png" alt="">Do Trips</a></div>
 							</div>
 							<p class="footer_about_text"> Venez découvrir le monde avec nous!</p>
 						</div>
@@ -182,6 +168,8 @@
 						</div>
 					</div>
 				</div>
+					<!-- Recherche -->
+
 				  	<div class="search-container">
     					<form action="/action_page.php">
       					<input type="text" placeholder="Recherche.." name="search">

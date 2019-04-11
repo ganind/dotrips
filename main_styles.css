@@ -276,7 +276,6 @@ section
 }
 .main_nav_item
 {
-	/*border: 2px solid #FFFFFF;*/
 	position: relative;
 	display: inline-block;
 	margin-right: 40px;
@@ -299,6 +298,17 @@ section
 .main_nav_item a:hover
 {
 	color: #fa9e1c;
+}
+.main_nav_item::after
+{
+	display: block;
+	position: absolute;
+	top: 7px;
+	right: -15px;
+	background: #FFFFFF;
+	width: 2px;
+	height: 15px;
+	content: '';	
 }
 
 /*********************************
@@ -358,7 +368,7 @@ section
 	margin-top: 50px;
 	font-size: 30px;
 	color: #31124b;
-	text-transform: uppercase;
+	text-transform: none;
 	text-shadow: 1px 1px orange;
 
 }
@@ -464,6 +474,131 @@ section
 {
 	color: orange;
 	cursor: pointer;
+}
+/*********************************
+5. Contact Form Section
+*********************************/
+
+.contact_form_section
+{
+	padding-top: 105px;
+}
+.contact_form_container
+{
+	padding-top: 74px;
+	padding-left: 98px;
+	padding-right: 98px;
+	padding-bottom: 100px;
+	background: linear-gradient(to top right, #fa9e1b, #8d4fff);
+}
+.contact_title
+{
+	font-size: 30px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-shadow: 1px 2px purple;
+}
+.contact_form
+{
+	margin-top: 52px;
+	font-size: 0px;
+}
+.input_field
+{
+	height: 48px;
+	font-size: 12px;
+	font-weight: 400;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: #FFFFFF;
+	border-bottom: solid 2px #e1e1e1;
+	text-shadow: 1px 1px purple;
+}
+.contact_form_name
+{
+	width: calc((100% - 30px) / 2);
+	margin-right: 30px;
+}
+.contact_form_email
+{
+	width: calc((100% - 30px) / 2);
+}
+.contact_form_subject
+{
+	width: 100%;
+	margin-top: 11px;
+}
+.contact_form_message
+{
+	height: 126px;
+	width: 100%;
+	border: none;
+	outline: none;
+	margin-top: 19px;
+	background: transparent;
+	font-size: 12px;
+	font-weight: 400;
+	color: #FFFFFF;
+	border-bottom: solid 2px #e1e1e1;
+	padding-top: 11px;
+	text-shadow: 1px 1px purple;
+}
+.form_submit_button
+{
+	font-size: 13px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 53px;
+	padding-left: 29px;
+	padding-right: 29px;
+	background: #31124b;
+	transform: translateY(15px);
+	border: none;
+	outline: none;
+	margin-top: 37px;
+	cursor: pointer;
+}
+.form_submit_button:hover
+{
+	opacity: 0.8;
+}
+.input_field::-webkit-input-placeholder,
+.text_field::-webkit-input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	color: #FFFFFF !important;
+}
+.input_field:-moz-placeholder,
+.text_field:-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	color: #FFFFFF !important;
+}
+.input_field::-moz-placeholder,
+.text_field::-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	color: #FFFFFF !important;
+} 
+.input_field:-ms-input-placeholder,
+.text_field:-ms-input-placeholder
+{ 
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	color: #FFFFFF !important;
+}
+.input_field::input-placeholder,
+.text_field::input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	color: #FFFFFF !important;
 }
 /********************
 6. Pied de Page
@@ -576,20 +711,6 @@ section
     width: 100%;
     margin: 0;
     padding: 14px;
-}
-/******************
-7. Produits
-******************/
-.titre
-{
-	width: 80%;
-	height: 8px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color:#666;
-	border: 0 none;
-	margin-top: 100px;
-	margin-bottom:100px;
 }
 
 }

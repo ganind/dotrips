@@ -1,3 +1,5 @@
+
+HTML Lint (v2.0.0)
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,26 +16,7 @@
 <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
 </head> 
 
-<?php
-/* Set server path */
-$PARAM_hote='localhost';
-/* Set server port */
-$PARAM_port='3306';
-/* Set database name */
-$PARAM_nom_bd='eboutique';
-/* Connect as root */
-$PARAM_utilisateur='root';
-/* No password */
-$PARAM_mot_passe='';
-
-session_start();
-
-/* Initialize connexion to database */
-$connexion = new PDO('mysql:host='.$PARAM_hote.';port='.$PARAM_port.';dbname='.$PARAM_nom_bd, $PARAM_utilisateur, $PARAM_mot_passe);
-?>
-
-
-
+<body>
 
 <div class="super_container"> <!-- grand bloc d'élements -->
 
@@ -57,19 +40,9 @@ $connexion = new PDO('mysql:host='.$PARAM_hote.';port='.$PARAM_port.';dbname='.$
 
 					<!-- Accès espace client -->
 
-					<div class="user_box ml-auto">
-					<?php
-							if (isset($_SESSION["access_level"]))
-							{
-								echo "<div class='user_box_login user_box_link'><a href='panier.php'>Mon panier</a></div>";
-							}
-							else
-							{
-								echo "<div class='user_box_login user_box_link'><a href='login.php'>S'Identifier</a></div>";
-								echo "<div class='user_box_register user_box_link'><a href='Nouveau_Membre.php'>Créer un compte</a></div>";
-							}
-							?>
-							</div> 
+					<div class="user_box ml-auto"> 
+					<div class="user_box_login user_box_link"><a href="login.php">S'Identifier</a></div>
+					<div class="user_box_register user_box_link"><a href="Nouveau_Membre.php">Créer un compte</a></div>
 					</div>
 				</div>
 			</div>	
@@ -86,7 +59,7 @@ $connexion = new PDO('mysql:host='.$PARAM_hote.';port='.$PARAM_port.';dbname='.$
 								<li class="main_nav_item"><a href="index.html">Packs</a></li>
 								<li class="main_nav_item"><a href="categories.html">Catégories</a></li>
 								<li class="main_nav_item"><a href="contact.html">Contact</a></li>
-								<li class="main_nav_item"><a href="products.php">Boutique</a></li>
+								<li class="main_nav_item"><a href="products.html">Boutique</a></li>
 							</ul>
 					</div>
 				</div>
@@ -94,77 +67,66 @@ $connexion = new PDO('mysql:host='.$PARAM_hote.';port='.$PARAM_port.';dbname='.$
 		</nav>
 
 	</header>
-	<body>
 
 <!-- Accueil -->
-<div class="titre">
-	<h6>Boutique</h6>
+
+<div class="home">
+
+<div class="promo_box">
+		<div class="promo_text">Choisissez votre prochain voyage parmi nos catégories...</div>
 	</div>
-    	<section>
-	<div class="login">
-<FORM action="" method="post">
-		<?php
-		/* Si on est en retour de formulaire d'ajout */
-		if (isset($_POST['product_nbr']))
-		{
-			/* On ajoute 1 au nombre total d'article */
-			$_SESSION["total_product"] = $_SESSION["total_product"] + 1;
-			/* Variable temporaire de nombre total d'articles */
-			$totalProd = $_SESSION["total_product"];
-			/* On ajoute au panier de session l'ID du produit issue du formulaire */
-			$_SESSION['panier'][$totalProd]['id_produit'] = $_POST['product'];
-		}
-		/* Sinon */
-		else
-		{
-			/* On requete en BDD tous les produits */
-			$c = $connexion->prepare("SELECT * FROM `produits`");
-			$c->execute();
-			$i = 0;
-			/* Initialisation d'un tableau dynamique */
-			echo "<table>";
-			/* Pour chaque produit on dépile la réponse */
-			while ($product[$i]=$c->fetch())
-			{
-				/* Création d'une ligne de tableau par produit */
-				echo "<tr>";
-					echo "<td>".$product[$i]['id_produit']."</td>";
-					echo "<td>".$product[$i]['nom_produit']."</td>";
-					echo "<td>".$product[$i]['prix_produit']."</td>";
-					echo "<td>".$product[$i]['stock_produit']."</td>";
-					echo "<td>".$product[$i]['num_cat']."</td>";
-				echo "</tr>";
-				$i = $i + 1;
-			}
-			echo "</table>";
-			/* Crétation d'une liste déroulante dynamique */
-			/* Ici la variable i est le nombre total de produit */
-			/* On parcours la liste "en sens inverse" en décrémentant i */
-			echo "<SELECT name='product' size='1'>";
-			for ($i; $i >= 0; $i--)
-			{
-				echo "<OPTION value=".$product[$i]['nom_produit'].">".$product[$i]['nom_produit'];
-			}
-			echo "</SELECT></br>";
-			/* Quantite et fin du formulaire */
-			echo "Quantite: <input type='text' name='product_nbr'></br>";
-			echo "<input type='submit' name='add_basket' value='Ajouter au panier'/>";
+	</div>
+	</div>	
 
-			if (isset($_POST["add_basket"])) {
+	<!-- Packs 1 -->
 
-				
-				if (!empty($product_nbr)){
+<div class="pack">
+	<div class="pack_box">
+		<div id="pack_box_items">
+			<div class="pack_box_background" style="background-image: url(images/usa.jpg);"></div>
+			<div class="pack_date">Voyagez aux</div>
+			<div class="pack_name">
+				<h1>Etas-Unis</h1>
+				<div class="pack_price">A Partir de 2000€</div>
+			</div>
+				<div class="pack_button_text">Regardez les Villes<a href="products.php"><span></span><span></span><span></span></a>
+				</div>
+		</div>
+	</div>
 
-					echo "ERREUR : Veuillez saisir la quantité souhaitée ";
-				}	
-            }
+	<!-- Packs 2 -->
 
+		<div class="pack_box_2">
+		<div id="pack_box_items">
+			<div class="pack_box_background" style="background-image: url(images/france.jpg);"></div>
+			<div class="pack_date">Voyagez en</div>
+			<div class="pack_name">
+				<h1>France</h1>
+				<div class="pack_price">A Partir de 500€</div>
+			</div>
+				<div class="pack_button_text">Regardez les Villes<a href="products.php"><span></span><span></span><span></span></a>
+				</div>
+		</div>
+	</div>
 
-			}
+	<!-- Packs 3 -->
 
+		<div class="pack_box_3">
+		<div id="pack_box_items">
+			<div class="pack_box_background" style="background-image: url(images/uk.jpg);"></div>
+			<div class="pack_date">Voyagez en</div>
+			<div class="pack_name">
+				<h1>Grande-Bretagne</h1>
+				<div class="pack_price">A Partir de 1000€</div>
+			</div>
+				<div class="pack_button_text">Regardez les Villes<a href="products.php"><span></span><span></span><span></span></a>
+				</div>
+		</div>
+			</div>
 
-			?>
-</FORM>
+		</div>
+
+</div>
 
 <!-- Pied de page | Footer -->
 
@@ -210,7 +172,6 @@ $connexion = new PDO('mysql:host='.$PARAM_hote.';port='.$PARAM_port.';dbname='.$
 	</div>
 	
 </footer> 
-
 
 </div>
 
